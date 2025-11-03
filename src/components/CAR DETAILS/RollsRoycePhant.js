@@ -1,13 +1,13 @@
 import React from 'react';
 import './Styles/Style.css';
 
-function RollsRoyce_Phant() {
+function RollsRoycePhant() {
     return (
         <div>
             <center>
                 <h1>Rolls-Royce Phantom</h1>
                 <img
-                    src="https://www.rolls-roycemotorcars.com/content/dam/rrmc/marketUK/rollsroycemotorcars_com/phantom-series-ii-discover/page-components/Phantom-II-Discover-Full-Shot-1-R.jpg/jcr:content/renditions/original"
+                    src="https://www.rolls-roycemotorcars.com/content/dam/rrmc/marketUK/rollsroycemotorcars_com/phantom-series-ii-discover/page-components/Phantom-II-Discover-Full-Shot-1-R.jpg/jcr:content/renditions/original alt='Rolls-Royce Phantom'"
                     height="864px"
                     width="1536px"
                     alt="Rolls-Royce Phantom"
@@ -185,4 +185,4 @@ function RollsRoyce_Phant() {
     );
 }
 
-export default RollsRoyce_Phant;
+export default RollsRoycePhant;

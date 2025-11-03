@@ -2,13 +2,13 @@ import React from 'react';
 import './Styles/Style.css';
 import '@google/model-viewer';
 
-function Lambo_Aven() {
+function LamboAven() {
     return (
         <div>
             <center>
                 <h1>Lamborghini Aventador</h1>
                 <img
-                    src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_gw/aventador/2023/02_09_refresh/aven_gate_s_01.jpg"
+                    src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_gw/aventador/2023/02_09_refresh/aven_gate_s_01.jpg alt='Lamborghini Aventador'"
                     height="864px"
                     width="1536px"
                 />
@@ -164,4 +164,4 @@ function Lambo_Aven() {
     );
 }
 
-export default Lambo_Aven;
+export default LamboAven;

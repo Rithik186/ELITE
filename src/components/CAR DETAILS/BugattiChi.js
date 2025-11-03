@@ -2,13 +2,13 @@ import React from 'react';
 import './Styles/Style.css';
 import '@google/model-viewer';
 
-function Bugattai_Chi() {
+function BugattaiChi() {
     return (
         <div>
             <center>
                 <h1>Bugatti Chiron</h1>
                 <img
-                    src="https://d2ox13tjqpxop5.cloudfront.net/BUGATTI-2023/Bugatti-Models/Sport/Gallery/CS_1.jpg"
+                    src="https://d2ox13tjqpxop5.cloudfront.net/BUGATTI-2023/Bugatti-Models/Sport/Gallery/CS_1.jpg alt='Bugatti Chiron'"
                     height="864px"
                     width="1536px"
                 />
@@ -163,4 +163,4 @@ function Bugattai_Chi() {
     );
 }
 
-export default Bugattai_Chi;
+export default BugattaiChi;

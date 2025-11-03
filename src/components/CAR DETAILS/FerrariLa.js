@@ -3,13 +3,13 @@ import './Styles/Style.css';
 import '@google/model-viewer';
 
 
-function Ferrari_La() {
+function FerrariLa() {
     return (
         <div>
             <center>
                 <h1>LaFerrari 2015</h1>
                 <img
-                    src="https://cdn.prod.website-files.com/662e6423ff88861916362956/6696f3dd1f4290298272f43a_SL-USQk12S18E6OISrXzK-3YRRduQ-Nn8Wdfav1qXQ0.webp"
+                    src="https://cdn.prod.website-files.com/662e6423ff88861916362956/6696f3dd1f4290298272f43a_SL-USQk12S18E6OISrXzK-3YRRduQ-Nn8Wdfav1qXQ0.webp alt='Ferrari LaFerrari'"
                     height="864px"
                     width="1536px"
                 />
@@ -175,4 +175,4 @@ function Ferrari_La() {
     );
 }
 
-export default Ferrari_La;
+export default FerrariLa;

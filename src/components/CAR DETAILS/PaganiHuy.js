@@ -2,13 +2,13 @@ import React from 'react';
 import './Styles/Style.css';
 import '@google/model-viewer';
 
-function Pagani_Huy() {
+function PaganiHuy() {
     return (
         <div>
             <center>
                 <h1>Pagani Huayra</h1>
                 <img
-                    src="https://4kwallpapers.com/images/walls/thumbs_3t/20075.jpg"
+                    src="https://4kwallpapers.com/images/walls/thumbs_3t/20075.jpg alt='Pagani Huayra'" 
                     height="864px"
                     width="1536px"
                     alt="Pagani Huayra"
@@ -164,4 +164,4 @@ function Pagani_Huy() {
     );
 }
 
-export default Pagani_Huy;
+export default PaganiHuy;

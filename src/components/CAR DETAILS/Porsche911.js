@@ -2,13 +2,13 @@ import React from 'react';
 import './Styles/Style.css';
 import '@google/model-viewer';
 
-function Porsche_911() {
+function Porsche911() {
     return (
         <div>
             <center>
                 <h1>Porsche 911 Turbo S</h1>
                 <img
-                    src="https://pics.porsche.com/rtt/iris?COSY-EU-100-1713c6eK12UC31P3T5JOCU%25hjdmiTDDmvMXlHWguCuq6Q44RtRHo9ZAaDjJu5PcI7tGW3rNbZJNKXv9Z7KcQQ%25yFN5tFAsXrw4r3wo0qnqZr8MCnR4i84tV2YN2OmNyW1QGWgCWKMUuyOiTG60KvPhQ5OC9gfNWRKymI4r3IfaFnqURSvK3BC7vFYvy6EI5mfqirhMBk5fePBulv0j"
+                    src="https://pics.porsche.com/rtt/iris?COSY-EU-100-1713c6eK12UC31P3T5JOCU%25hjdmiTDDmvMXlHWguCuq6Q44RtRHo9ZAaDjJu5PcI7tGW3rNbZJNKXv9Z7KcQQ%25yFN5tFAsXrw4r3wo0qnqZr8MCnR4i84tV2YN2OmNyW1QGWgCWKMUuyOiTG60KvPhQ5OC9gfNWRKymI4r3IfaFnqURSvK3BC7vFYvy6EI5mfqirhMBk5fePBulv0j alt='Porsche 911 Turbo S'"
                     height="864px"
                     width="1536px"
                     alt="Porsche 911 Turbo S"
@@ -169,4 +169,4 @@ function Porsche_911() {
     );
 }
 
-export default Porsche_911;
+export default Porsche911;

@@ -7,12 +7,12 @@ import ContactUs from './components/ContactUs'; // Import the ContactUs componen
 import HomePage from './components/pages/HomePage';
 import CarsPage from './components/pages/CarsPage';
 import CarDetailsPage from './components/pages/CarDetailsPage';
-import Lambo_Aven from './components/CAR DETAILS/Lambo_Aven';
-import Ferrari_La from './components/CAR DETAILS/Ferrari_La';
-import Bugatti_Chi from './components/CAR DETAILS/Bugatti_Chi';
-import RollsRoyce_Phant from './components/CAR DETAILS/RollsRoyce_Phant';
-import Porsche_911 from './components/CAR DETAILS/Porsche_911';
-import Pagani_Huy from './components/CAR DETAILS/Pagani_Huy';
+import LamboAven from './components/CAR DETAILS/LamboAven';
+import FerrariLa from './components/CAR DETAILS/FerrariLa';
+import BugattiChi from './components/CAR DETAILS/BugattiChi';
+import RollsRoycePhant from './components/CAR DETAILS/RollsRoycePhant';
+import Porsche911 from './components/CAR DETAILS/Porsche911';
+import PaganiHuy from './components/CAR DETAILS/PaganiHuy';
 
 function App() {
   return (
@@ -24,12 +24,12 @@ function App() {
         <Route path="/cars/:id" element={<CarDetailsPage />} />
         <Route path="/aboutus" element={<AboutUs />} /> {/* Route for AboutUs */}
         <Route path="/contact" element={<ContactUs />} /> {/* Route for ContactUs */}
-        <Route path="/cars/lamborghini" element={<Lambo_Aven />} /> {/* Lamborghini route */}
-        <Route path="/cars/ferrari" element={<Ferrari_La />} /> {/* Ferrari route */}
-        <Route path="/cars/bugatti" element={<Bugatti_Chi />} /> {/* Bugatti route */}
-        <Route path="/cars/rolls-royce" element={<RollsRoyce_Phant />} />
-        <Route path="/cars/porsche" element={<Porsche_911 />} />
-        <Route path="/cars/pagani" element={<Pagani_Huy />} />
+        <Route path="/cars/lamborghini" element={<LamboAven />} /> {/* Lamborghini route */}
+        <Route path="/cars/ferrari" element={<FerrariLa />} /> {/* Ferrari route */}
+        <Route path="/cars/bugatti" element={<BugattiChi />} /> {/* Bugatti route */}
+        <Route path="/cars/rolls-royce" element={<RollsRoycePhant />} />
+        <Route path="/cars/porsche" element={<Porsche911 />} />
+        <Route path="/cars/pagani" element={<PaganiHuy />} />
       </Routes>
       <Footer />
     </Router></>
