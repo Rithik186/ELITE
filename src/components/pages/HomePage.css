@@ -1,0 +1,24 @@
+.home-page {
+    height: 100vh; /* Makes the div take up the full viewport height */
+    background-image: url('img.jpeg');
+    background-size: cover; /* Ensures the background image covers the entire area */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: white; /* Text color to stand out against the background */
+    display: flex;
+    flex-direction: column; /* Aligns items vertically */
+    justify-content: flex-start; /* Aligns the content to the top */
+    align-items: center;
+    text-align: center;
+  }
+  
+  .text-container {
+    padding-top: 30px; /* Space between the top and the text */
+    z-index: 10; /* Ensures the text is above the background */
+  }
+  
+  h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a subtle shadow to the text */
+  }
+  

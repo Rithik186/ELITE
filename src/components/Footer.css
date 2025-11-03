@@ -1,0 +1,10 @@
+.footer {
+  position: relative; /* Allows the footer to stay at the bottom without overlapping */
+  left: 0;
+  width: 100%; /* Ensures it covers the full width */
+  background-color: black; /* Sets the background to black */
+  color: white; /* Sets the text color to white */
+  text-align: center; /* Centers the text horizontally */
+  padding: 10px 0; /* Adds padding for spacing */
+  font-size: 14px; /* Adjusts the text size */
+}

@@ -1,0 +1,79 @@
+body {
+    background-color: black;
+    color: white;
+  }
+  
+  .about-us {
+    padding: 2em;
+    color: white;
+  }
+  
+  .about-us-title {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  
+  .about-us-heading {
+    font-size: 1.5em;
+    margin: 1em 0;
+  }
+  
+  .about-us-paragraph {
+    font-size: 1em;
+    line-height: 1.6em;
+    margin: 1em 0;
+  }
+  
+  .about-us-name {
+    font-weight: bold;
+    color: #f39c12;
+  }
+  
+  .about-us-type {
+    font-style: italic;
+    color: #e74c3c;
+  }
+  
+  .about-us-spec {
+    font-weight: bold;
+    color: #2ecc71;
+  }
+  
+  .about-us-thank-you {
+    margin-top: 2em;
+  }
+  
+  .about-us-thank-you-message {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .brand-partners {
+    margin-top: 3em;
+    text-align: center;
+  }
+  
+  .brand-partners-title {
+    font-size: 1.8em;
+    color: #3498db;
+    margin-bottom: 1em;
+  }
+  
+  .brand-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+  
+  .brand-logo {
+    width: 120px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .brand-logo:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  

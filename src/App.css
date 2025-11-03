@@ -1,0 +1,44 @@
+.about-us {
+  font-family: Sans-serif;
+  background-color: rgb(248, 249, 250);
+  padding: 18px;
+  color: black;
+}
+
+.about-us-title {
+  color: black;
+  font-family: Sans-serif;
+}
+
+.about-us-heading {
+  text-align: center;
+  font-family: Sans-serif;
+}
+
+.about-us-name {
+  font-weight: bold;
+}
+
+.about-us-type {
+  color: #333;
+}
+
+.about-us-spec {
+  color: #444;
+  font-style: italic;
+}
+
+.about-us-paragraph {
+  font-size: 1.1em;
+}
+
+.about-us-thank-you {
+  font-weight: bold;
+  text-align: center;
+}
+
+.about-us-thank-you-message {
+  color: blue;
+  font-size: 16px;
+  font-weight: bold;
+}
