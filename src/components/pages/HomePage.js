@@ -56,7 +56,7 @@ function HomePage() {
           </div>
           <div className="car-card">
             <div className="car-image-container">
-              <img src="https://images.ferrari.com/is/image/ferrariwr/1636985732159_01_laferrari-aperta_ext_34f_white_2016?wid=1024&hei=683" alt="Ferrari" />
+              <img src="https://cdn.prod.website-files.com/662e6423ff88861916362956/67ec0e22582cb537b2a8e438_gallery_image_17-1743523353340.webp" alt="Ferrari" />
             </div>
             <div className="car-info">
               <h3>Ferrari</h3>
@@ -66,7 +66,7 @@ function HomePage() {
           </div>
           <div className="car-card">
             <div className="car-image-container">
-              <img src="https://www.bugatti.com/fileadmin/_processed_/b/c/csm_chiron-pur-sport-hero_f8d6b1d4c7.jpg" alt="Bugatti" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Bugatti_Chiron_1.jpg" alt="Bugatti" />
             </div>
             <div className="car-info">
               <h3>Bugatti</h3>

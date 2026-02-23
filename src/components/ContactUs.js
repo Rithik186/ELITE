@@ -13,24 +13,32 @@ function ContactUs() {
       <div className="contact-content">
         {/* Contact Information */}
         <aside className="info-sidebar">
-          <div className="info-item">
-            <i className="fa fa-phone"></i>
-            <h3>Private Line</h3>
-            <p>+1 (555) ELITE-TX</p>
-            <p>Available 24/7 for Global Concierge</p>
+          <div className="info-item user-profile-item">
+            <i className="fa fa-user"></i>
+            <h3>Founder</h3>
+            <p>Rithik Kannaa K</p>
+            <a
+              href="https://www.linkedin.com/in/rithikkannaa-k/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+            >
+              <i className="fa fa-linkedin-square"></i> Professional Portfolio
+            </a>
           </div>
 
           <div className="info-item">
-            <i className="fa fa-envelope"></i>
-            <h3>Global Inquiries</h3>
-            <p>concierge@elitecars.com</p>
+            <i className="fa fa-phone"></i>
+            <h3>Private Concierge</h3>
+            <p>+91 (PRIVATE) ELITE</p>
+            <p>Exclusive 24/7 support for registered collectors</p>
           </div>
 
           <div className="info-item">
             <i className="fa fa-map-marker"></i>
             <h3>The Showroom</h3>
-            <p>100 Elite Plaza, Hyderabad</p>
-            <p>Telangana, India</p>
+            <p>Elite Horizon, Coimbatore</p>
+            <p>Tamilnadu, India</p>
           </div>
 
           <div className="info-item">
