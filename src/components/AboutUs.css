@@ -1,79 +1,152 @@
-body {
-    background-color: black;
-    color: white;
-  }
-  
-  .about-us {
-    padding: 2em;
-    color: white;
-  }
-  
-  .about-us-title {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-  }
-  
-  .about-us-heading {
-    font-size: 1.5em;
-    margin: 1em 0;
-  }
-  
-  .about-us-paragraph {
-    font-size: 1em;
-    line-height: 1.6em;
-    margin: 1em 0;
-  }
-  
-  .about-us-name {
-    font-weight: bold;
-    color: #f39c12;
-  }
-  
-  .about-us-type {
-    font-style: italic;
-    color: #e74c3c;
-  }
-  
-  .about-us-spec {
-    font-weight: bold;
-    color: #2ecc71;
-  }
-  
-  .about-us-thank-you {
-    margin-top: 2em;
-  }
-  
-  .about-us-thank-you-message {
-    font-size: 1.2em;
-    font-weight: bold;
-  }
-  
-  .brand-partners {
-    margin-top: 3em;
+.about-us-container {
+  background-color: #050505;
+  color: #fff;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Hero Section */
+.about-hero {
+  position: relative;
+  height: 60vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(5, 5, 5, 1)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=2070') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: clamp(3rem, 10vw, 5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  margin: 0;
+  background: linear-gradient(to bottom, #fff, #ffd700);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  color: #ffd700;
+  font-size: 1.2rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+/* Mission Section */
+.mission-section {
+  padding: 100px 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.mission-text h2 {
+  font-size: 2.5rem;
+  color: #ffd700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+.mission-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.mission-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+/* Values Grid */
+.values-grid {
+  padding: 100px 10%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.value-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 50px 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 215, 0, 0.05);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-15px);
+  background: rgba(255, 215, 0, 0.05);
+  border-color: rgba(255, 215, 0, 0.3);
+}
+
+.value-card i {
+  font-size: 3rem;
+  color: #ffd700;
+  margin-bottom: 25px;
+}
+
+.value-card h3 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.value-card p {
+  color: #888;
+  line-height: 1.6;
+}
+
+/* Partners Branding */
+.partners-section {
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.partners-section h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #888;
+  margin-bottom: 60px;
+}
+
+.partner-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  opacity: 0.6;
+}
+
+.partner-logos img {
+  height: 60px;
+  filter: grayscale(1) brightness(2);
+  transition: all 0.3s ease;
+}
+
+.partner-logos img:hover {
+  filter: grayscale(0) brightness(1);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@media (max-width: 992px) {
+  .mission-section {
+    grid-template-columns: 1fr;
     text-align: center;
   }
-  
-  .brand-partners-title {
-    font-size: 1.8em;
-    color: #3498db;
-    margin-bottom: 1em;
-  }
-  
-  .brand-logos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2em;
-  }
-  
-  .brand-logo {
-    width: 120px;
-    height: auto;
-    transition: transform 0.3s ease;
-  }
-  
-  .brand-logo:hover {
-    transform: scale(1.2);
-    cursor: pointer;
-  }
-  
+}

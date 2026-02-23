@@ -1,17 +1,49 @@
 header {
-    background-color: #333;
-    padding: 1em 0;
-  }
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-  }
-  nav ul li:hover{
-  background-color: rgb(100, 100, 100);
-  }
-  nav a {
-    color: white;
-    text-decoration: none;
-  }
-  
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(15px);
+  padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ffd700;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a:hover::after {
+  width: 100%;
+}

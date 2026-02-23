@@ -1,165 +1,128 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Styles/Style.css';
 import '@google/model-viewer';
 
 function PaganiHuy() {
-    return (
-        <div>
-            <center>
-                <h1>Pagani Huayra</h1>
-                <img
-                    src="https://4kwallpapers.com/images/walls/thumbs_3t/20075.jpg alt='Pagani Huayra'" 
-                    height="864px"
-                    width="1536px"
-                    alt="Pagani Huayra"
-                />
-                <p>
-                    **ART IN MOTION**  
-                    The Pagani Huayra combines exceptional performance with breathtaking design. Known as a hypercar masterpiece, it delivers an unparalleled driving experience with handcrafted precision and cutting-edge aerodynamics.
-                </p>
+    const modelViewerRef = useRef(null);
 
-                {/* 3D View Section */}
-                <div>
-                    <h1>Explore the Pagani Huayra in 3D</h1>
-                    <p>SCROLL TO ZOOM AND HOLD LEFT MOUSE AND SCROLL TO MOVE</p>
+    const toggleFullscreen = () => {
+        if (modelViewerRef.current) {
+            if (modelViewerRef.current.requestFullscreen) {
+                modelViewerRef.current.requestFullscreen();
+            } else if (modelViewerRef.current.webkitRequestFullscreen) {
+                modelViewerRef.current.webkitRequestFullscreen();
+            } else if (modelViewerRef.current.msRequestFullscreen) {
+                modelViewerRef.current.msRequestFullscreen();
+            }
+        }
+    };
+
+    return (
+        <div className="car-detail-page">
+            {/* Hero Section */}
+            <section
+                className="detail-hero"
+                style={{ backgroundImage: `url('https://4kwallpapers.com/images/walls/thumbs_3t/20075.jpg')` }}
+            >
+                <div className="hero-overlay"></div>
+                <div className="hero-info">
+                    <h1>Pagani Huayra</h1>
+                    <div className="hero-stats">
+                        <div className="stat-item">
+                            <h4>AMG Power</h4>
+                            <p>720 HP</p>
+                        </div>
+                        <div className="stat-item">
+                            <h4>Weight</h4>
+                            <p>1,350 KG</p>
+                        </div>
+                        <div className="stat-item">
+                            <h4>Top Speed</h4>
+                            <p>370 KM/H</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Media Section: 3D & Video */}
+            <section className="media-section">
+                <div className="viewer-container">
+                    <div className="container-header">
+                        <h2 className="container-title">Kinetic Art 3D</h2>
+                        <button className="fullscreen-btn" onClick={toggleFullscreen}>
+                            <i className="fa fa-expand"></i> View Fullscreen
+                        </button>
+                    </div>
                     <model-viewer
-                        src="/MODEL/source/2022_pagani_huayra_codalunga.glb" // Replace with the actual path to your .glb file
-                        alt="A 3D model of the Ferrari LaFerrari"
+                        ref={modelViewerRef}
+                        src="/MODEL/source/2022_pagani_huayra_codalunga.glb"
+                        alt="3D model of Pagani Huayra"
                         ar
                         ar-modes="webxr scene-viewer quick-look"
                         camera-controls
                         auto-rotate
                         shadow-intensity="1"
-                        style={{
-                            width: '100%',
-                            height: '500px',
-                            border: '2px solid #000',
-                            borderRadius: '10px',
-                        }}
+                        style={{ width: '100%', height: '500px' }}
                     >
                     </model-viewer>
                 </div>
-
                 <div className="video-container">
-                    <h2>Pagani Huayra Promo Video</h2>
+                    <h2 className="container-title">The Sound of Wind</h2>
                     <div className="video-wrapper">
                         <iframe
-                            width="853"
-                            height="480"
-                            src="https://www.youtube.com/embed/Wc2UN3yL2CU?autoplay=1&mute=1&rel=0&showinfo=0&modestbranding=1&controls=0"
-                            title="Pagani Huayra Video"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            src="https://www.youtube.com/embed/Wc2UN3yL2CU?autoplay=1&mute=1&rel=0"
+                            title="Pagani Huayra Promo"
                             allowFullScreen
                         ></iframe>
                     </div>
                 </div>
-                <h1>DESIGN</h1>
-                <p>
-                    <h2>Exterior:</h2>
-                    A blend of sculptural artistry and advanced aerodynamics.
-                    Active aerodynamics system that adjusts to driving conditions for optimal performance.
-                    Signature gull-wing doors for iconic Pagani style.
+            </section>
 
-                    <h2>Interior:</h2>
-                    Luxuriously handcrafted cabin featuring premium leather and carbon fiber accents.
-                    Futuristic dashboard with analog and digital instrumentation.
-                    Attention to detail that reflects Pagani’s commitment to excellence.
-                </p>
-                <img
-                    src="https://www.carscoops.com/wp-content/uploads/2020/05/Pagani-Huayra-Roadster-12.jpg"
-                    alt="Pagani Huayra Interior"
-                />
-                <h1>Performance</h1>
-                <h2>Engine:</h2>
-                <p>
-                    A Mercedes-AMG sourced 6.0-liter twin-turbocharged V12 engine, producing an astonishing 720 horsepower.
-                    0-100 km/h in 2.8 seconds with a top speed of 370 km/h (230 mph).
-                </p>
-                <h2>Transmission:</h2>
-                <p>
-                    7-speed sequential gearbox optimized for lightning-fast shifts.
-                </p>
-                <h2>Driving Modes:</h2>
-                <ul>
-                    <li><b>Comfort:</b> For smooth and relaxed driving.</li>
-                    <li><b>Sport:</b> Enhanced dynamics for spirited driving.</li>
-                    <li><b>Track:</b> Maximum precision and performance for racing conditions.</li>
-                </ul>
-                <h1>Technical Specifications</h1>
-                <table border="1" className="specs-table">
-                    <thead>
-                        <tr>
-                            <th>Feature</th>
-                            <th>Details</th>
-                        </tr>
-                    </thead>
+            {/* Features Section */}
+            <section className="features-section">
+                <h2 className="container-title">The God of Wind</h2>
+                <div className="feature-grid">
+                    <div className="feature-card">
+                        <h3>Carbo-Titanium</h3>
+                        <p>The chassis is a masterpiece of materials science, utilizing a unique weave of carbon fiber and titanium for extreme strength and weight reduction.</p>
+                    </div>
+                    <div className="feature-card">
+                        <h3>Active Aero</h3>
+                        <p>Four independently controlled flaps on the corners of the car adjust constantly, providing the perfect balance between drag and downforce.</p>
+                    </div>
+                    <div className="feature-card">
+                        <h3>Horacio's Vision</h3>
+                        <p>Every bolt, switch, and dial is designed as a standalone piece of art, reflecting Pagani's philosophy that a car should be a beautiful object.</p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Technical Specs Table */}
+            <section className="specs-section">
+                <h2 className="container-title">Bespoke Specifications</h2>
+                <table className="specs-table">
                     <tbody>
-                        <tr>
-                            <td>Engine Type</td>
-                            <td>6.0L Twin-Turbocharged V12</td>
-                        </tr>
-                        <tr>
-                            <td>Max Power</td>
-                            <td>720 hp</td>
-                        </tr>
-                        <tr>
-                            <td>Max Torque</td>
-                            <td>1000 Nm</td>
-                        </tr>
-                        <tr>
-                            <td>Top Speed</td>
-                            <td>370 km/h (230 mph)</td>
-                        </tr>
-                        <tr>
-                            <td>Acceleration</td>
-                            <td>0-100 km/h in 2.8 seconds</td>
-                        </tr>
-                        <tr>
-                            <td>Weight</td>
-                            <td>1,350 kg</td>
-                        </tr>
-                        <tr>
-                            <td>Drivetrain</td>
-                            <td>Rear-Wheel Drive (RWD)</td>
-                        </tr>
-                        <tr>
-                            <td>Chassis</td>
-                            <td>Carbon-Titanium Monocoque</td>
-                        </tr>
-                        <tr>
-                            <td>Brakes</td>
-                            <td>Carbon Ceramic Brakes</td>
-                        </tr>
-                        <tr>
-                            <td>Fuel Type</td>
-                            <td>Petrol (Premium).</td>
-                        </tr>
-                        <tr>
-                            <td>Tank Capacity</td>
-                            <td>85 liters (22.5 gallons).</td>
-                        </tr>
-                        <tr>
-                            <td>0-60 mph</td>
-                            <td>2.8 seconds</td>
-                        </tr>
-                        <tr>
-                            <td>Price</td>
-                            <td>Starts at $2.4 million</td>
-                        </tr>
-                        <tr>
-                            <td>Unique Fact</td>
-                            <td>Named after Huayra Tata, a South American wind god</td>
-                        </tr>
+                        <tr><td>Engine</td><td>6.0L Twin-Turbo V12 (Mercedes-AMG)</td></tr>
+                        <tr><td>Max Power</td><td>720 hp</td></tr>
+                        <tr><td>Max Torque</td><td>1000 Nm</td></tr>
+                        <tr><td>Top Speed</td><td>370 km/h (230 mph)</td></tr>
+                        <tr><td>Acceleration</td><td>0-100 km/h in 2.8 seconds</td></tr>
+                        <tr><td>Drivetrain</td><td>Rear-Wheel Drive (RWD)</td></tr>
+                        <tr><td>Chassis</td><td>Carbon-Titanium Monocoque</td></tr>
+                        <tr><td>Brakes</td><td>Brembo Carbon-Ceramic</td></tr>
+                        <tr><td>Base Price</td><td>Starts at $2.4 Million</td></tr>
                     </tbody>
                 </table>
+            </section>
+
+            {/* Gallery Section */}
+            <section className="gallery-section">
                 <img
-                    src="https://www.hdwallpapers.in/download/pagani_huayra_nc_2022_car_4k_5k_hd_cars-HD.jpg"
-                    height="800px"
-                    width="1200px"
-                    alt="Pagani Huayra Rear View"
+                    src="https://www.carscoops.com/wp-content/uploads/2020/05/Pagani-Huayra-Roadster-12.jpg"
+                    alt="Interior Sculpture"
+                    style={{ width: '100%', height: 'auto', display: 'block' }}
                 />
-            </center>
+            </section>
         </div>
     );
 }

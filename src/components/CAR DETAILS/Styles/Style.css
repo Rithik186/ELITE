@@ -1,24 +1,203 @@
-p{
-    color: white;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+
+.car-detail-page {
+    background-color: #050505;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
+
+/* Hero Section */
+.detail-hero {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 100px 5%;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 40%, #050505 100%);
+}
+
+.hero-info {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-info h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    background: linear-gradient(to right, #fff, #ffd700);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.stat-item h4 {
+    color: #ffd700;
+    margin: 0;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.stat-item p {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 5px 0 0 0;
+}
+
+/* 3D & Media Section */
+.media-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 100px 5%;
+    background: #0a0a0a;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.container-title {
+    font-size: 1.5rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ffd700;
+}
+
+.fullscreen-btn {
+    background: transparent;
+    border: 1px solid #ffd700;
+    color: #ffd700;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.fullscreen-btn:hover {
+    background: #ffd700;
+    color: #000;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.viewer-container,
+.video-wrapper {
+    background: #111;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: none;
+}
+
+/* Fullscreen state for model-viewer */
+model-viewer:fullscreen {
+    background-color: #000;
+}
+
+/* Features Grid */
+.features-section {
+    padding: 100px 5%;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    background: rgba(255, 215, 0, 0.05);
+    transform: translateY(-10px);
+}
+
+.feature-card h3 {
+    color: #ffd700;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+/* Technical Specs Table */
+.specs-section {
+    padding: 100px 5%;
+    background: #0a0a0a;
+}
+
 .specs-table {
-    width: 80%; /* Adjust the percentage to make it larger or smaller */
-    margin: 20px auto; /* Center the table */
-    border-collapse: collapse; /* Optional: remove spacing between cells */
-    font-size: 1.2em; /* Optional: make the text larger */
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
 }
 
-.specs-table th,
+.specs-table tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 .specs-table td {
-    border: 1px solid #ddd;
-    padding: 12px; /* Adjust padding for cell spacing */
-    text-align: left; /* Align text to the left */
+    padding: 25px;
+    font-size: 1.1rem;
 }
 
-.specs-table th {
-    background-color: #f4f4f4; /* Light background color for visibility */
-    color: #333; /* Dark text color for contrast */
-    font-weight: bold;
-    padding: 12px;
-    text-align: left;
+.specs-table td:first-child {
+    color: #888;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.specs-table td:last-child {
+    text-align: right;
+    font-weight: 700;
+    color: #ffd700;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .media-section {
+        grid-template-columns: 1fr;
+    }
 }

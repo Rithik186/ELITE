@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import CarCard from '../CarCard';
+import './CarsPage.css';
 
 const cars = [
     { id: 1, name: 'Lamborghini Aventador', price: 500000, image: 'https://i.ytimg.com/vi/bHpt53_7Xh4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCI4E6ia-kJJ4tRex6-ecHWYTgoRw', route: '/cars/lamborghini' },
@@ -12,51 +13,54 @@ const cars = [
 ];
 
 function CarsPage() {
-    const navigate = useNavigate(); // Use the navigate function
-
-    // State for managing the search query
+    const navigate = useNavigate();
     const [searchQuery, setSearchQuery] = useState('');
-    
-    // Function to handle search input
+
     const handleSearch = (event) => {
         setSearchQuery(event.target.value);
     };
 
-    // Filter cars based on the search query
     const filteredCars = cars.filter(car =>
         car.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     return (
-        <div>
-            <h1>Available Cars</h1>
-
-            {/* Search Bar */}
-            <div className="search-bar">
-                <input
-                    type="text"
-                    placeholder="Search cars..."
-                    value={searchQuery}
-                    onChange={handleSearch}
-                />
-            </div>
-
-            {/* Display filtered cars */}
-            <div className="car-list">
-                {filteredCars.length > 0 ? (
-                    filteredCars.map((car) => (
-                        <CarCard
-                            key={car.id}
-                            name={car.name}
-                            price={car.price}
-                            image={car.image}
-                            onDetailsClick={() => navigate(car.route)} // Correct navigation
+        <div className="cars-page">
+            <header className="cars-header">
+                <div className="header-container">
+                    <h1 className="glitch-text" data-text="ELITE COLLECTION">ELITE COLLECTION</h1>
+                    <div className="search-box">
+                        <i className="fa fa-search"></i>
+                        <input
+                            type="text"
+                            placeholder="SEARCH BY MODEL"
+                            value={searchQuery}
+                            onChange={handleSearch}
                         />
-                    ))
-                ) : (
-                    <p>No cars found matching your search.</p>
-                )}
-            </div>
+                    </div>
+                </div>
+            </header>
+
+            <main className="car-showcase">
+                <div className="car-grid">
+                    {filteredCars.length > 0 ? (
+                        filteredCars.map((car) => (
+                            <div key={car.id} onClick={() => navigate(car.route)} className="card-wrapper">
+                                <CarCard
+                                    name={car.name}
+                                    price={car.price}
+                                    image={car.image}
+                                />
+                            </div>
+                        ))
+                    ) : (
+                        <div className="not-found">
+                            <i className="fa fa-eye-slash"></i>
+                            <p>NO BEAUTY FOUND FOR YOUR SEARCH</p>
+                        </div>
+                    )}
+                </div>
+            </main>
         </div>
     );
 }

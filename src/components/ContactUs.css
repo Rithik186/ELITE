@@ -1,63 +1,160 @@
-/* ContactUs.css */
+.contact-page-container {
+  background-color: #050505;
+  color: #fff;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
 
-/* Container for the Contact Us page */
-.contact-container {
-    font-family: 'Arial', sans-serif;
-    background-color: #000000;
-    padding: 40px 20px;
-    color: #333;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Contact Hero */
+.contact-hero {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(5, 5, 5, 1)), url('https://images.unsplash.com/photo-1593121925328-369cc84c9828?auto=format&fit=crop&q=80&w=2070') center/cover;
+}
+
+.contact-hero h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  margin: 0;
+  color: #ffd700;
+}
+
+.contact-hero p {
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-top: 10px;
+}
+
+/* Main Content */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 100px;
+  padding: 100px 10%;
+}
+
+/* Info Side */
+.info-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.info-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 215, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.info-item:hover {
+  background: rgba(255, 215, 0, 0.05);
+  border-color: #ffd700;
+}
+
+.info-item i {
+  font-size: 2rem;
+  color: #ffd700;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.info-item h3 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.info-item p {
+  color: #aaa;
+  line-height: 1.6;
+}
+
+/* Form Side */
+.contact-form-container {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 60px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.form-group.full {
+  grid-column: span 2;
+}
+
+.contact-form label {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 15px;
+  color: #fff;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #ffd700;
+  background: rgba(255, 215, 0, 0.05);
+}
+
+.submit-btn {
+  grid-column: span 2;
+  background: #ffd700;
+  color: #000;
+  border: none;
+  padding: 20px;
+  border-radius: 8px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.submit-btn:hover {
+  background: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+}
+
+@media (max-width: 992px) {
+  .contact-content {
+    grid-template-columns: 1fr;
   }
-  
-  /* Heading style */
-  .contact-container h1 {
-    font-size: 36px;
-    color: #4d7dac;
-    margin-bottom: 20px;
+
+  .contact-form {
+    grid-template-columns: 1fr;
   }
-  
-  /* Paragraph text styling */
-  .contact-container p {
-    font-size: 18px;
-    color: #ffffff;
-    margin: 10px 0;
-    line-height: 1.6;
+
+  .form-group.full {
+    grid-column: span 1;
   }
-  
-  /* Styling for icons */
-  .contact-container i {
-    margin-right: 10px;
-    color: #3498db; /* Color for the icons */
-    font-size: 24px;
-  }
-  
-  /* Additional styles for better spacing and layout */
-  .contact-container .fa-phone, .contact-container .fa-envelope, .contact-container .fa-map-marker {
-    font-size: 28px; /* Make icons slightly larger */
-  }
-  
-  .contact-container .fa-phone:hover,
-  .contact-container .fa-envelope:hover,
-  .contact-container .fa-map-marker:hover {
-    color: #1abc9c; /* Change icon color on hover */
-    transition: color 0.3s ease;
-  }
-  
-  /* Footer (optional) */
-  .contact-container footer {
-    margin-top: 40px;
-    font-size: 14px;
-    color: #aaa;
-  }
-  
-  .contact-container footer a {
-    text-decoration: none;
-    color: #3498db;
-  }
-  
-  .contact-container footer a:hover {
-    text-decoration: underline;
-  }
-  
+}

@@ -3,47 +3,67 @@ import './AboutUs.css';
 
 function AboutUs() {
   return (
-    <center>
-      <div className="about-us">
-      <title>ELITE CAR SHOWROOM</title>
-        <h2 className="about-us-title">About Us!</h2>
-
-        <h2 className="about-us-heading">
-          Welcome To <span className="about-us-name">ELITE CAR SHOWROOM</span>
-        </h2>
-
-        <p className="about-us-paragraph">
-          <span className="about-us-name">ELITE CAR SHOWROOM</span> is a Professional <span className="about-us-type">CAR SALES</span> Platform.
-          Here we will only provide you with interesting content that you will enjoy very much. We are committed to providing you the best of
-          <span className="about-us-type">CAR SALES</span>, with a focus on reliability and <span className="about-us-spec">LUXURY CARS ONLY</span>.
-          We strive to turn our passion for <span className="about-us-type">CAR SALES</span> into a thriving website. We hope you enjoy our 
-          <span className="about-us-type">CAR SALES</span> as much as we enjoy giving them to you.
-        </p>
-
-        <p className="about-us-paragraph">
-          I will keep on posting such valuable and knowledgeable information on my website for all of you. Your love and support matter a lot.
-        </p>
-
-        <p className="about-us-thank-you">
-          Thank you for visiting our site
-          <br />
-          <br />
-          <span className="about-us-thank-you-message">Have a great day!</span>
-        </p>
-
-        <div className="brand-partners">
-          <h2 className="brand-partners-title">Our Official Brand Partners</h2>
-          <div className="brand-logos">
-            <img src="/images/lambo.webp" alt="Brand 1" className="brand-logo" />
-            <img src="/images/ferrari.webp" alt="Brand 2" className="brand-logo" />
-            <img src="/images/pagani.png" alt="Brand 3" className="brand-logo" />
-            <img src="/images/porsche.png" alt="Brand 4" className="brand-logo" />
-            <img src="/images/rollsroyce.jpg" alt="Brand 5" className="brand-logo" />
-            <img src="/images/bugatti.png" alt="Brand 6" className="brand-logo" />
-          </div>
+    <div className="about-us-container">
+      {/* Hero Section */}
+      <section className="about-hero">
+        <div className="hero-content">
+          <h1>True Excellence</h1>
+          <p className="hero-subtitle">The World's Most Elite Collection</p>
         </div>
-      </div>
-    </center>
+      </section>
+
+      {/* Mission Section */}
+      <section className="mission-section">
+        <div className="mission-text">
+          <h2>Our Heritage</h2>
+          <p>
+            Founded on the principles of absolute perfection, ELITE CAR SHOWROOM
+            is more than just a dealership. We are curators of automotive history,
+            offering only the most exclusive hypercars and luxury vehicles ever engineered.
+          </p>
+          <p>
+            Every vehicle in our collection undergoes a rigorous certification process
+            to ensure it meets our uncompromising standards of performance, provenance,
+            and aesthetic perfection.
+          </p>
+        </div>
+        <div className="mission-image">
+          <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&q=80&w=2070" alt="Showroom Excellence" />
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="values-grid">
+        <div className="value-card">
+          <i className="fa fa-diamond"></i>
+          <h3>Uncompromising Quality</h3>
+          <p>Direct partnerships with top-tier manufacturers ensure every part of our service is authentic.</p>
+        </div>
+        <div className="value-card">
+          <i className="fa fa-shield"></i>
+          <h3>Absolute Integrity</h3>
+          <p>Transparency is the foundation of our relationships with collectors and enthusiasts worldwide.</p>
+        </div>
+        <div className="value-card">
+          <i className="fa fa-globe"></i>
+          <h3>Global Network</h3>
+          <p>Access to private collections and limited-run allocations that aren't available to the general public.</p>
+        </div>
+      </section>
+
+      {/* Partner Logos */}
+      <section className="partners-section">
+        <h2>Our Official Heritage Partners</h2>
+        <div className="partner-logos">
+          <img src="/images/lambo.webp" alt="Lamborghini" />
+          <img src="/images/ferrari.webp" alt="Ferrari" />
+          <img src="/images/pagani.png" alt="Pagani" />
+          <img src="/images/porsche.png" alt="Porsche" />
+          <img src="/images/rollsroyce.jpg" alt="Rolls-Royce" />
+          <img src="/images/bugatti.png" alt="Bugatti" />
+        </div>
+      </section>
+    </div>
   );
 }
 
