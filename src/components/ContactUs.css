@@ -60,6 +60,35 @@
   border-color: #ffd700;
 }
 
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  color: #ffd700;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.social-link:hover {
+  background: #ffd700;
+  color: #000;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.social-link i {
+  font-size: 1.1rem !important;
+  margin: 0 !important;
+  display: inline-block !important;
+}
+
 .info-item i {
   font-size: 2rem;
   color: #ffd700;
